@@ -8,11 +8,11 @@ import {
   ShoppingBag,
   Dumbbell,
   Contact,
-  Zap,
 } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Footer from "../components/Footer";
+import BottomNav from "../components/BottomNav"
 
 
 
@@ -151,15 +151,7 @@ export default function RootLayout({
           </div>
         )}
 
-        {/* ================= ZAP BUTTON ================= */}
-        {!open && (
-          <button
-            onClick={() => setOpen(true)}
-            className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-full bg-white p-4 text-black shadow-xl active:scale-95 md:hidden"
-          >
-            <Zap />
-          </button>
-        )}
+        <BottomNav />
         <Footer />
 
       </body>
